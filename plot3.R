@@ -1,6 +1,8 @@
+# read dataset
 data <- read.table("household_power_consumption.txt",head=TRUE,sep=";",na.string ="?")
 data$Date <- as.Date(data$Date,format="%d/%m/%Y")
 
+# select sub dataset
 start <- as.Date("2007/02/01",format="%Y/%m/%d")
 end <- as.Date("2007/02/02",format="%Y/%m/%d")
 
@@ -14,8 +16,11 @@ data1$Datime <- convertDT
 png("plot3.png", width=480, height=480)
 with(data1,{
         plot(data1$Datime,data1$Sub_metering_1,type="n",xlab="Time",ylab="Energy Sub Metering")
+        # plot line related to sub metering 1
         lines(data1$Datime,data1$Sub_metering_1,col="black")
+        # plot line related to sub metering 2
         lines(data1$Datime,data1$Sub_metering_2,col="green")
+        # plot line related to sub metering 3
         lines(data1$Datime,data1$Sub_metering_3,col="blue")
         legend("topright", legend = c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), bty="n", lty = "solid", col = c("black","green","blue"))
 })
