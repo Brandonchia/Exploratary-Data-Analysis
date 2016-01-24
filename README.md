@@ -1,2 +1,2 @@
 # Exploratary-Data-Analysis
-# The code included is all about the course Exploratory Data Analysis.
+# Codes included are all about the course Exploratory Data Analysis.
