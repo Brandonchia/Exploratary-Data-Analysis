@@ -17,6 +17,6 @@ with(data1,{
         lines(data1$Datime,data1$Sub_metering_1,col="black")
         lines(data1$Datime,data1$Sub_metering_2,col="green")
         lines(data1$Datime,data1$Sub_metering_3,col="blue")
-        legend("topright",bty="n", legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),lty=1,col=c("black","red","blue") )
+        legend(x = "topright", legend = c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), bty="n", lty = "solid", col = c("black","red","blue"))
 })
 dev.off()
