@@ -13,7 +13,7 @@ data1$Datime <- convertDT
 ## plot 2
 png("plot2.png", width=480, height=480)
 with(data1,{
-        plot(data1$Datime,data1$Global_active_power,type="n")
-        lines(data1$Datime,data1$Global_active_power,xlab="Time",ylab="Global Active Power(kilowatts)")
+        plot(data1$Datime,data1$Global_active_power,type="n",xlab="Time",ylab="Global Active Power(kilowatts)")
+        lines(data1$Datime,data1$Global_active_power)
 })
 dev.off()
